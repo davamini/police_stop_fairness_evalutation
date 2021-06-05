@@ -14395,7 +14395,8 @@ Number of times of search conducted yielded no contraband: 14735
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Intersectionality-Analysis">Intersectionality Analysis<a class="anchor-link" href="#Intersectionality-Analysis">&#182;</a></h1><blockquote><p>We will see if intersectional categories compound. We can see that the fields subject_sex and is_Black have a high impact on the results, i.e. probability of the algorithm yielding searched==True, given the magnitude of subject_sex[T.male]:is_Black coefficient. It seems that the two fields are correlated.</p>
+<h1 id="Intersectionality-Analysis">Intersectionality Analysis<a class="anchor-link" href="#Intersectionality-Analysis">&#182;</a></h1><blockquote><p>I chose intersectionality analysis because it seemed to be an adaquete method for determining the algorithm's fairness of smaller groups of people. Our prior analysis in the first report was limited in-part because we only compared Whites and Blacks for demographic parity without considering age and/or gender as much.</p>
+<p>We will see if intersectional categories compound. We can see that the fields subject_sex and is_Black have a high impact on the results, i.e. probability of the algorithm yielding searched==True, given the magnitude of subject_sex[T.male]:is_Black coefficient. It seems that the two fields are correlated.</p>
 </blockquote>
 
 </div>
@@ -14539,7 +14540,9 @@ Number of times of search conducted yielded no contraband: 14735
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Before-preprocessing">Before preprocessing<a class="anchor-link" href="#Before-preprocessing">&#182;</a></h3>
+<h3 id="Before-preprocessing">Before preprocessing<a class="anchor-link" href="#Before-preprocessing">&#182;</a></h3><blockquote><p>These are search probabilities without any preprocessing.</p>
+</blockquote>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
@@ -14576,34 +14579,46 @@ Number of times of search conducted yielded no contraband: 14735
   </thead>
   <tbody>
     <tr>
-      <th>17</th>
-      <td>white</td>
-      <td>25 - 45</td>
-      <td>0.109309</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>black</td>
-      <td>25 - 45</td>
-      <td>0.192722</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>white</td>
-      <td>25 - 45</td>
-      <td>0.119556</td>
-    </tr>
-    <tr>
       <th>29</th>
       <td>black</td>
       <td>25 - 45</td>
-      <td>0.161881</td>
+      <td>0.045881</td>
     </tr>
     <tr>
       <th>30</th>
       <td>white</td>
       <td>25 - 45</td>
-      <td>0.091146</td>
+      <td>0.077667</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>white</td>
+      <td>Less than 25</td>
+      <td>0.010000</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>white</td>
+      <td>25 - 45</td>
+      <td>0.323190</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>black</td>
+      <td>Less than 25</td>
+      <td>0.081111</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>white</td>
+      <td>25 - 45</td>
+      <td>0.007619</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>white</td>
+      <td>25 - 45</td>
+      <td>0.003095</td>
     </tr>
   </tbody>
 </table>
@@ -14619,7 +14634,9 @@ Number of times of search conducted yielded no contraband: 14735
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="After-preprocessing">After preprocessing<a class="anchor-link" href="#After-preprocessing">&#182;</a></h3>
+<h3 id="After-preprocessing">After preprocessing<a class="anchor-link" href="#After-preprocessing">&#182;</a></h3><blockquote><p>These preprocessed probabilities show how Whites seem to gain a slightly higher probability of being searched while Blacks seem to get a slightly lower probability.</p>
+</blockquote>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
@@ -14656,34 +14673,46 @@ Number of times of search conducted yielded no contraband: 14735
   </thead>
   <tbody>
     <tr>
-      <th>17</th>
-      <td>white</td>
-      <td>25 - 45</td>
-      <td>0.165269</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>black</td>
-      <td>25 - 45</td>
-      <td>0.146624</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>white</td>
-      <td>25 - 45</td>
-      <td>0.178050</td>
-    </tr>
-    <tr>
       <th>29</th>
       <td>black</td>
       <td>25 - 45</td>
-      <td>0.122452</td>
+      <td>0.022932</td>
     </tr>
     <tr>
       <th>30</th>
       <td>white</td>
       <td>25 - 45</td>
-      <td>0.141380</td>
+      <td>0.120925</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>white</td>
+      <td>Less than 25</td>
+      <td>0.036463</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>white</td>
+      <td>25 - 45</td>
+      <td>0.408330</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>black</td>
+      <td>Less than 25</td>
+      <td>0.038817</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>white</td>
+      <td>25 - 45</td>
+      <td>0.036179</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>white</td>
+      <td>25 - 45</td>
+      <td>0.031068</td>
     </tr>
   </tbody>
 </table>
@@ -14776,7 +14805,7 @@ There is a notable performance improvement across all groups, in terms of AUC.</
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h1><blockquote><p>Our elaborate feature engineering, i.e. using preprocessing the change the probabilities of being searched and using the result as a new feature, seems to have paid off since the models effectiveness appears to have improved all around.
+<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h1><blockquote><p>Our elaborate feature engineering, i.e. using preprocessing to change the probabilities of being searched and using the result as a new feature, seems to have paid off since the models effectiveness appears to have improved all around.
 While our final algorithm is more fair than what we started with, it still exhibits some intersectional inequalities:</p>
 <ul>
 <li>It performs best on Black &amp; Greater than 45 &amp; female. </li>
